@@ -1,3 +1,28 @@
+import os
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+
+def run_dummy_server():
+    port = int(os.environ.get("PORT", 10000))
+    server = HTTPServer(('0.0.0.0', port), BaseHTTPRequestHandler)
+    server.serve_forever()
+
+threading.Thread(target=run_dummy_server, daemon=True).start()
+
+from telegram import Update
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    MessageHandler,
+    ContextTypes,
+    filters,
+)
+
+TOKEN = "8693336963:AAHrZQzXBkr3nwtuBn5eIFWaQRs8JaRvFJY"
+
+
+
+
 from telegram import Update
 from telegram.ext import (
     Application,
