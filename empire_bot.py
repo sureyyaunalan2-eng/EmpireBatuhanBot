@@ -7,7 +7,7 @@ from telegram.ext import (
     filters,
 )
 
-TOKEN = "8693336963:AAFFqzFJL_eXbtk-i6R2rA9jeM7TrF3k_cM"
+TOKEN = "8693336963:AAHrZQzXBkr3nwtuBn5eIFWaQRs8JaRvFJY"
 
 
 # 🕐 SAATLİK MESAJ
